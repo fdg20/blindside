@@ -35,14 +35,16 @@ Output goes to `dist/`. The build also creates `404.html` for GitHub Pages SPA r
 
 ## Deploy to GitHub Pages
 
-### Option 1: GitHub Actions (Recommended)
+### Setup (one-time)
 
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**
-4. Push to `main` — the workflow deploys automatically
+1. Go to **Settings → Pages** in your repo
+2. Under **Build and deployment**, set **Source** to **Deploy from a branch**
+3. Select branch: **gh-pages** and folder: **/ (root)**
+4. Save
 
-**Important**: For repo `fdg20/blindside`, the site will be at `fdg20.github.io/blindside`. The workflow is configured with `VITE_BASE_PATH: /blindside/`.
+### Automatic deployment
+
+The workflow runs on every push to `main`. It builds the site and pushes to the `gh-pages` branch. Your site will be at **https://fdg20.github.io/blindside/**
 
 ### Option 2: Manual Deploy
 
